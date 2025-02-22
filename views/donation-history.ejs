@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation History</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Arial', sans-serif;
+    }
+    .container {
+      max-width: 1200px;
+    }
+    h2 {
+      color: #b71c1c;  /* Dark red */
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .history-table {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 30px;
+      padding: 20px;
+    }
+    .table th, .table td {
+      text-align: center;
+      vertical-align: middle;
+    }
+    .table thead {
+      background-color: #d32f2f;  /* Red color */
+      color: white;
+    }
+    .table tbody tr:hover {
+      background-color: #f8d7da; /* Light red for hover effect */
+    }
+    .table-bordered {
+      border: 2px solid #ddd;
+    }
+    .table-bordered th, .table-bordered td {
+      border: 1px solid #ddd;
+    }
+    .table-responsive {
+      margin-top: 20px;
+    }
+    .blood-icon {
+      font-size: 1.5em;
+      color: #d32f2f;
+    }
+    .donation-details {
+      font-size: 1.2em;
+    }
+    .btn-danger {
+      background-color: #d32f2f;
+      border-color: #d32f2f;
+    }
+    .btn-danger:hover {
+      background-color: #b71c1c;
+      border-color: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Blood donation Dashboard</a>
+          <div>
+            <a class="nav-link" href="/logout">Logout</a>
+          </div>
+        </div>
+      </nav>
+  <div class="container">
+    <h2>Donation History <i class="fas fa-tint blood-icon"></i></h2>
+    <div class="table-responsive">
+      <table class="table table-bordered history-table">
+        <thead>
+          <tr>
+            <th>Donor Name</th>
+            <th>Blood Type</th>
+            <th>Donation Date</th>
+            <th>Quantity</th> <!-- Added Quantity Column -->
+            <!-- <th>Action</th>  Action Column for Buttons -->
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop through donors array passed from the server -->
+          <% donors.forEach(function(donor) { %>
+            <tr>
+              <td><%= donor.donor_name %></td>
+              <td><%= donor.blood_type %></td>
+              <td><%= donor.dob %></td> <!-- Display Donation Date -->
+              <td><%= donor.quantity %> units</td> <!-- Display Donation Quantity -->
+              <td>
+                <!-- Action Button -->
+                <!-- <a href="/view-donor/<%= donor.id %>" class="btn btn-danger">
+                  <i class="fas fa-eye"></i> View
+                </a> -->
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Transfers</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .transfer-form {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="mt-5">Blood Transfer</h2>
+    <form action="/process-transfer" method="POST" class="transfer-form">
+      <div class="form-group">
+        <label for="bloodType">Select Blood Type</label>
+        <select class="form-control" id="bloodType" name="bloodType">
+          <option value="O+">O+</option>
+          <option value="A+">A+</option>
+          <option value="B+">B+</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity (Units)</label>
+        <input type="number" class="form-control" id="quantity" name="quantity" required>
+      </div>
+      <div class="form-group">
+        <label for="recipient">Recipient's Name</label>
+        <input type="text" class="form-control" id="recipient" name="recipient" required>
+      </div>
+      <button type="submit" class="btn btn-success">Transfer Blood</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Bank Staff Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 900px;
+      margin-top: 30px;
+    }
+    .dashboard-header {
+      color: #b71c1c;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .list-group-item {
+      font-size: 1.2em;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .list-group-item:hover {
+      background-color: #f1f1f1;
+    }
+    .list-group-item a {
+      text-decoration: none;
+      color: #d32f2f;
+      font-weight: 500;
+    }
+    .list-group-item a:hover {
+      color: #b71c1c;
+    }
+    .btn-dashboard {
+      background-color: #d32f2f;
+      color: white;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      width: 100%;
+    }
+    .btn-dashboard:hover {
+      background-color: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="dashboard-header">Blood Bank Staff Dashboard</h2>
+
+    <div class="list-group">
+      <!-- View Available Blood -->
+      <li class="list-group-item">
+        <a href="/users/view-blood-bank">
+          <i class="fas fa-tint"></i> View Available Blood
+        </a>
+      </li>
+
+      <!-- Request Blood Supply -->
+      <li class="list-group-item">
+        <a href="/users/request-blood-supply">
+          <i class="fas fa-truck"></i> Request Blood Supply
+        </a>
+      </li>
+
+      <!-- Update Profile -->
+      <li class="list-group-item">
+        <a href="/users/update-profile">
+          <i class="fas fa-user-edit"></i> Update Profile
+        </a>
+      </li>
+
+      <!-- Logout -->
+      <li class="list-group-item">
+        <a href="/logout">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </li>
+    </div>
+
+    <!-- Button to quickly access blood donation management -->
+    <div class="mt-4">
+      <a href="/users/manage-donations" class="btn-dashboard">
+        Manage Blood Donations
+      </a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

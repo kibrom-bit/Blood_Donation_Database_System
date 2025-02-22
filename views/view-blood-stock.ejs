@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Blood Stock</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .blood-stock-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .blood-type {
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .blood-icon {
+      font-size: 50px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Available Blood Stock</h2>
+    <div class="row">
+      <!-- Sample Blood Stock -->
+      <div class="col-md-4">
+        <div class="blood-stock-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="blood-type">O+</div>
+            <div class="blood-icon">&#x1F9E5;</div> <!-- Blood Drop Emoji -->
+          </div>
+          <p>Quantity: 10 units</p>
+          <p>Last Donation Date: 2025-01-15</p>
+          <button class="btn btn-danger">Transfer Blood</button>
+        </div>
+      </div>
+      <!-- Repeat for other blood types as needed -->
+    </div>
+  </div>
+</body>
+</html>
